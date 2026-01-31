@@ -2,6 +2,7 @@ import sqlite3
 import os
 
 DB_PATH = os.getenv("DB_PATH", "data/data_from1c.db")
+API_KEY = os.getenv("API_KEY")
 
 def init_db():
     os.makedirs("data", exist_ok=True)

@@ -3,6 +3,8 @@ version: "3.9"
 services:
   backend:
     build: .
+    env_file:
+      - .env
     container_name: exchange-backend
     restart: unless-stopped
     ports:
@@ -11,3 +13,4 @@ services:
       - ./data:/app/data
     environment:
       - DB_PATH=/app/data/data_from1c.db
+
